@@ -1,0 +1,20 @@
+.footer {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.8)
+      ), url("../assets/img/header-background.png");
+    background-size: 100%;
+    width: 100%;
+    min-height: 30vh;
+}
+
+.footer-content {
+    padding: 48px 96px !important;
+    display: block;
+    width: 100%;
+    padding: 24px;
+    color: white;
+    font-size: 16px;
+}

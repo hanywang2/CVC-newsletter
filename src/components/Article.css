@@ -7,8 +7,8 @@
 }
 
 .article {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 36px;
+    margin-bottom: 36px;
     width: 90%;
     background-color: white;
     border-radius: 12px;
@@ -45,6 +45,27 @@
 
 .borderRight {
     border-right: 1px solid #DDD;
+}
+
+.mid-title {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.startup {
+    margin-top: 12px;
+}
+
+.startup a {
+    color: #A5312A;
+    text-decoration-line: underline;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.startup p {
+    font-size: 20px;
+    line-height: 32px;
 }
 
 @media (max-width: 990px) {
