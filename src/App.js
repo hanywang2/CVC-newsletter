@@ -9,17 +9,18 @@ import { Row, Col, InputGroup, FormControl, Button as Click } from 'react-bootst
 
 import './App.css';
 
-import pic1 from './assets/template/pic1.png';
-import pic2 from './assets/template/pic2.png';
+import construction from './assets/img/4-30/construction.jpg';
+import insurance from './assets/img/4-30/insurance.jpg';
+import podcast from './assets/img/4-30/podcast.jpg';
 
 
 function App() {
   return (
     <div>
-      <Header date="March 12, 2020"/>
+      <Header date="April 30, 2020"/>
       <Special>
         <h1 className="preview">Question of the week</h1>
-        <h1 className="headline">How has COVID-19 affected your restaurant exprience?</h1>
+        <h1 className="headline">Would you prefer to use a traditional agent or mobile technology for your insurance coverage?</h1>
         <InputGroup className="mb-3">
           <FormControl
             placeholder="Your response"
@@ -32,41 +33,39 @@ function App() {
         </InputGroup>
       </Special>
       <Article title="Inside this issue" table center>
-        <h1 className="titles">Legal Tech</h1>
-        <h1 className="titles">Food Delivery</h1>
-        <h1 className="titles">Ad Tech</h1>
-        <h1 className="titles">Cannabis</h1>
-        <h1 className="titles">Podcast Of The Week</h1>
-        <h1 className="titles">Big Red Spotlight</h1>
+        <h1 className="titles">CONSTRUCTION</h1>
+        <h1 className="titles">INSURANCE</h1>
+        <h1 className="titles">PODCAST OF THE WEEK</h1>
+        <h1 className="titles">TERM OF THE WEEK</h1>
       </Article>
-      <Article title="Food Delivery" img={pic1}>
+      <Article title="Construction" img={construction}>
         <Row>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              NYC Council Bills Aim to Slash Food Delivery Fees
+              Social Distancing Tech Hits Construction Sites and Factory Floors
             </h1>
             <p className="preview">
-              Big Apple legislators are about to take a stab at regulating food delivery giants like Grubhub and UberEats. The New York City Council on Thursday will be presented with a package of six bills aimed at reducing the fees food delivery apps can charge city restaurants to 10 percent, down from as much as 30 percent.
+              Construction workers across the United States may soon be required to wear a device on their hard hats that emits an alarm if they come within six feet of another employee at a job site. As they get closer, the alarm gets louder. The tool, called Proximity Trace, doesn’t just function as a loud reminder for workers to practice the social distancing guidelines from the US Centers for Disease Control and Prevention...
             </p>
-            <Button href="https://www.cornellvc.com/" pos="center">Read More</Button>
+            <Button href="https://qz.com/1845581/social-distancing-tech-can-ensure-workers-stay-six-feet-apart/" pos="center">Read More</Button>
           </Col>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              Amid Coronavirus Concerns, Food Delivery Services Offer No-contact Drop-off
+              Robots, AI, and the road to a fully autonomous construction industry
             </h1>
             <p className="preview">
-              With more people being asked to work from home or self-quarantine as the number of confirmed coronavirus cases rise, the use of food delivery services may spike. Minimizing contact where possible is one way to potentially reduce the risk of spreading the virus among customers and delivery workers in all industries.
+              Built Robotics executives are fond of saying that their autonomous system for construction equipment, like dozers and excavators, might be further along than many autonomous vehicles. In fact, CEO Noah Ready-Campbell insists you’ll see autonomous vehicles in controlled industrial environments — like construction sites — before you see level 5 driverless cars on public roads...
             </p>
-            <Button href="https://www.cornellvc.com/" pos="center">Read More</Button>
+            <Button href="https://venturebeat.com/2020/04/23/robots-ai-and-the-road-to-a-fully-autonomous-construction-industry/" pos="center">Read More</Button>
           </Col>
           <Col lg={4}>
             <h1 className="headline">
-              If the Coronavirus Spreads in America, Food Delivery Companies Could See a Surge in Demand — are they Ready?
+              Four Ways the Construction Industry Can Leverage Technology During COVID-19
             </h1>
             <p className="preview">
-              More Americans are using the internet for their grocery shopping and meal plans, and that trend was going strong before coronavirus concerns, said David Portalatin, vice president, food industry advisor, for The NPD Group, a market research firm.
+              To survive and thrive beyond COVID-19, contractors must find better ways today to collect and share field data and deploy agile cloud-based resource management solutions that allow contractors to rapidly respond to any project issues with real-time data. The sudden onset of COVID-19 hit the world like a ton of bricks, bringing industry after industry to a screeching halt...
             </p>
-            <Button href="https://www.cornellvc.com/" pos="center">Read More</Button>
+            <Button href="https://venturebeat.com/2020/04/23/robots-ai-and-the-road-to-a-fully-autonomous-construction-industry/" pos="center">Read More</Button>
           </Col>
         </Row>
         <Row className="mt-3">
@@ -75,34 +74,110 @@ function App() {
               <h1 className="mid-title">Startups We're Looking At</h1>
             </div>
             <div className="startup">
-              <a href="https://www.cornellvc.com/">Dahmakan</a>
+              <a href="https://www.manufacton.com" target="_blank" rel="noopener noreferrer">
+                Manufacton
+              </a>
               <p>
-                Dahmakan is the first Malaysian startup to participate in Y Combinator’s startup accelerator program. It’s a full-stack food delivery startup using “cloud” kitchens and software from recipe development to last-mile delivery to reduce delivery costs.
+                Manufacton empowers construction firms to set up fabrication facilities by shipping volumetric modular pieces of the building to the job-site. Complementing this innovative approach to construction, Manufacton enables its clients to plan, track, and optimize their prefabricated assemblies, kits and materials. 
               </p>
             </div>
             <div className="startup">
-              <a href="https://www.cornellvc.com/">HungryPanda</a>
+              <a href="https://www.buildstream.co.uk/" target="_blank" rel="noopener noreferrer">
+                BuildStream
+              </a>
               <p>
-              HungryPanda is a food delivery service that tailors its platform for Chinese-language users, including business owners. HungryPanda focuses on Chinese food and grocery deliveries with a goal to serve Chinese communities in cities around the world.
+                BuildStream is a next-generation marketplace for construction equipment rentals and labor services. The app enables users to quickly source vetted and approved equipment and labor services from our pool of approved suppliers, with free analytics tools to monitor spend and performance in real-time. 
               </p>
             </div>
             <div className="startup">
-              <a href="https://www.cornellvc.com/">Peach</a>
+              <a href="https://www.builtrobotics.com/" target="_blank" rel="noopener noreferrer">
+                Build Robotics
+              </a>
               <p>
-              Peach differentiates itself by focusing on delivering multiple lunch orders to office buildings. Their delivery of group lunch orders to multiple customers in one office building is a fundamentally different economic model than the 1-to-1 nature of its competitors.
+                Built Robotics’ mission is to build the robots that build the world. By upgrading off-the-shelf heavy equipment with AI guidance systems, Built’s technology enables machines to operate fully autonomously. Built’s robots are deployed today across the $1 trillion earthmoving industry, and they’re being used to build critical infrastructures such as wind farms, gas pipelines, and new housing developments. 
               </p>
             </div>
           </Col>
         </Row>
       </Article>
-      <Article title="Podcast OTW" img={pic2}>
+      <Article title="Insurance" img={insurance}>
+        <Row>
+          <Col lg={4} className="borderRight">
+            <h1 className="headline">
+              Insurtech Could Thrive in a COVID-19 Insurance Market
+            </h1>
+            <p className="preview">
+              The word ‘unprecedented’ has been overused, but it’s also the only real way to describe the impact of the COVID-19 pandemic on our daily lives, work and the world of business...
+            </p>
+            <Button href="https://techhq.com/2020/04/insurtech-could-thrive-in-a-covid-19-insurance-market/" pos="center">Read More</Button>
+          </Col>
+          <Col lg={4} className="borderRight">
+            <h1 className="headline">
+              Insurtech Advances Minimize Coronavirus Upheaval
+            </h1>
+            <p className="preview">
+              The coronavirus, a once-in-a-lifetime black swan event for global societies and business, is presenting never before experienced challenges to the economy — including the insurance sector...
+            </p>
+            <Button href="https://www.propertycasualty360.com/2020/04/24/insurtech-advances-minimize-coronavirus-upheaval/?slreturn=20200325231143" pos="center">Read More</Button>
+          </Col>
+          <Col lg={4}>
+            <h1 className="headline">
+              COVID-19 is Threatening the Ability of Insurtech to Combat Business Interruption 
+            </h1>
+            <p className="preview">
+              Coronavirus crept through the world methodically. First came warnings of international cases. Soon social media feeds were filled with images of desolate Chinese cities and videos of Italians singing in unison from their balconies...
+            </p>
+            <Button href="https://riskandinsurance.com/covid-19-is-threatening-the-ability-of-insurtech-to-combat-business-interruption/" pos="center">Read More</Button>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Startups We're Looking At</h1>
+            </div>
+            <div className="startup">
+              <a href="https://www.iglooinsure.com/" target="_blank" rel="noopener noreferrer">
+                Igloo
+              </a>
+              <p>
+                Igloo is a Singapore-based insurtech startup that works with e-commerce and travel firms in Southeast Asia to provide their customers insurance products that cover accidents, travel, and electronics. In the last 45 days, the startup has seen an uptick in transactions and customer acquisitions as COVID-19 creates increased demand for insurance in the e-commerce industry. 
+              </p>
+            </div>
+            <div className="startup">
+              <a href="https://www.lemonade.com/" target="_blank" rel="noopener noreferrer">
+                Lemonade
+              </a>
+              <p>
+                Lemonade is an application that provides coverage and insurance policies to users via an A.I. chatbox rather than a traditional broker. Lemonade takes its profit directly out of each monthly payment to lemonade, and holds the rest for claims. Unlike traditional insurance companies, the remaining unpaid claims go to a charity of the users choice.
+              </p>
+            </div>
+            <div className="startup">
+              <a href="https://www.trov.com/" target="_blank" rel="noopener noreferrer">
+                Trōv
+              </a>
+              <p>
+                Trōv is a provider of on-demand insurance for individual items without the need for a traditional insurance agent. The service is conducted through an application that handles claims via a chatbox and users track their possessions via a photograph or receipt that is backed up to the cloud. Trōv has now expanded to provide business, auto, and renters insurance.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Article>
+      <Article title="Podcast OTW" img={podcast}>
         <h1 className="headline">
-          What’s the Hidden Business Behind Your Business? w/ Rent the Runway’s Jenn Hyman
+          An Update on Consumer & Enterprise Venture Capital - Invest Like the Best
         </h1>
         <p className="preview">
-          Rent the Runway co-founder Jenn Hyman knows: Behind every successful business is another business backstage, one you might not expect. Rent the Runway is known for creating a glamorous "closet in the cloud,” but as Hyman explains, it achieved unicorn status by mastering a few less glamorous businesses — including the world’s largest dry-cleaning operation and a data insights practice that’s changing the fashion industry.
+          Patrick O'shaughnessy’s podcast includes interviews of the established investors and their outlook on investing. This episode features Bill Gurley and Chetan Puttagunta, partners at Benchmark Capital, and discusses early stage investing during the hectic period of COVID-19. They examine previous downturns, the early stage environment, and enterprise businesses
         </p>
-        <Button href="https://www.cornellvc.com/" pos="left">Listen Here</Button>
+        <Button href="https://podcasts.google.com/?feed=aHR0cHM6Ly9pbnZlc3RsaWtldGhlYmVzdC5saWJzeW4uY29tL3Jzcw&episode=NGVkNGQwODktNDI5OC00OGFmLTljN2QtMDk0MjEyMzAwZjY2&hl=en&ved=2ahUKEwjvyN64moXpAhWegXIEHYhaDNwQjrkEegQIChAG&ep=6" pos="left">Listen Here</Button>
+      </Article>
+      <Article title='Term of the Week'>
+      <h1 className="headline">
+        What is "Venture Capital"?
+      </h1>
+      <p className="preview">
+        Venture capital is a form of private equity and a type of financing that investors provide to startup companies and small businesses that are believed to have long-term growth potential. Venture capital generally comes from well-off investors, investment banks and any other financial institutions. However, it does not always take a monetary form; it can also be provided in the form of technical or managerial expertise. Venture capital is typically allocated to small companies with exceptional growth potential, or to companies that have grown quickly and appear poised to continue to expand.
+      </p>
       </Article>
       <Footer />
     </div>
