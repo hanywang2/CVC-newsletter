@@ -1,0 +1,40 @@
+h1, h2, p {
+    margin: 0
+}
+
+.row {
+    margin: 0
+}
+
+.header {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.8)
+      ), url("../assets/img/header-background.png");
+    background-size: 100%;
+    width: 100%;
+    min-height: 30vh;
+}
+
+.header-content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 24px;
+    color: white;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.logo {
+    margin-left: 24px;
+    height: 36px;
+}

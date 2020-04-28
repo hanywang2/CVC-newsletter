@@ -1,0 +1,54 @@
+.container {
+    padding: 0;
+}
+
+.extra-padding {
+    padding: 18px 0;
+}
+
+.article {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 90%;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.article-title {
+    padding: 8px 24px;
+    font-size: 28px;
+    color: #A5312A;
+    font-weight: bold;
+}
+
+.article-img {
+    width: 100%;
+}
+
+.article-content {
+    padding: 24px;
+}
+
+.titles {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.headline { 
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.preview {
+    font-size: 24px
+}
+
+.borderRight {
+    border-right: 1px solid #DDD;
+}
+
+@media (max-width: 990px) {
+    .borderRight {
+        border-right: none;
+    }
+}
