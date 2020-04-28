@@ -16,7 +16,14 @@
 
 .article-title {
     padding: 8px 24px;
-    font-size: 28px;
+    font-size: 32px;
+    color: #A5312A;
+    font-weight: bold;
+}
+
+.header-title {
+    padding: 8px 24px;
+    font-size: 40px;
     color: #A5312A;
     font-weight: bold;
 }

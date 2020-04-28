@@ -31,7 +31,7 @@ function App() {
           </InputGroup.Append>
         </InputGroup>
       </Special>
-      <Article title="Inside this issue" table>
+      <Article title="Inside this issue" table center>
         <h1 className="titles">Legal Tech</h1>
         <h1 className="titles">Food Delivery</h1>
         <h1 className="titles">Ad Tech</h1>
