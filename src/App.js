@@ -5,7 +5,7 @@ import Special from './components/Special';
 import Article from './components/Article';
 import Button from './components/Button';
 
-import { Row, Col, InputGroup, FormControl, Button as Click } from 'react-bootstrap';
+import { Row, Col, InputGroup, FormControl, Button as Click, ListGroup } from 'react-bootstrap';
 
 import './App.css';
 
@@ -21,7 +21,7 @@ function App() {
       <Special>
         <h1 className="preview">Question of the week</h1>
         <h1 className="headline">Would you prefer to use a traditional agent or mobile technology for your insurance coverage?</h1>
-        <InputGroup className="mb-3">
+        {/* <InputGroup className="mb-3">
           <FormControl
             placeholder="Your response"
             aria-label="Recipient's username"
@@ -30,7 +30,14 @@ function App() {
           <InputGroup.Append>
             <Click variant="outline-danger">Submit</Click>
           </InputGroup.Append>
-        </InputGroup>
+        </InputGroup> */}
+        <ListGroup>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        </ListGroup>
       </Special>
       <Article title="Inside this issue" table center>
         <h1 className="titles">CONSTRUCTION</h1>
