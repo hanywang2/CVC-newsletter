@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import firebase from './firebase/index';
+import Filter from 'bad-words';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -31,10 +32,13 @@ class App extends Component {
 
   submit = () => {
     if (this.state.response.length > 0) {
+      const { response } = this.state;
+      const filter = new Filter();
+      const filteredResponse = filter.clean(response);
       const time = new Date().getTime();
-      firebase.db.collection('posts').doc(this.state.date).set({[time]: this.state.response}, {merge: true})
+      firebase.db.collection('posts').doc(this.state.date).set({[time]: filteredResponse}, {merge: true})
         .then(() => {
-          this.state.responses.unshift(this.state.response);
+          this.state.responses.unshift(filteredResponse);
           this.setState({displayResponses: true})
         }).catch((err) => {
           console.log(err);
