@@ -15,3 +15,8 @@ a:hover {
   color: white;
   text-decoration: underline;
 }
+
+.bg-cvc {
+  background-color: #A5312A;
+  color: white;
+}

@@ -81,7 +81,7 @@ class App extends Component {
         {
           (this.state.displayResponses) ? 
           <ListGroup>
-            { this.state.responses.map((response, i) => <ListGroup.Item className="text-center" key={i}>{response}</ListGroup.Item>) }
+            { this.state.responses.map((response, i) => <ListGroup.Item className={`text-center ${(i === 0) ? 'bg-cvc' : ''}`} key={i}>{response}</ListGroup.Item>) }
           </ListGroup> : ''
         }
       </Special>
