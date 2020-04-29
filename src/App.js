@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import firebase from './firebase/index';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Special from './components/Special';
@@ -13,31 +16,74 @@ import construction from './assets/img/4-30/construction.jpg';
 import insurance from './assets/img/4-30/insurance.jpg';
 import podcast from './assets/img/4-30/podcast.jpg';
 
+class App extends Component {
 
-function App() {
-  return (
-    <div>
-      <Header date="April 30, 2020"/>
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      date: 'April 30, 2020',
+      response: '',
+      responses : [],
+      displayResponses: false
+    }
+  }
+
+  submit = () => {
+    if (this.state.response.length > 0) {
+      const time = new Date().getTime();
+      firebase.db.collection('posts').doc(this.state.date).set({[time]: this.state.response}, {merge: true})
+        .then(() => {
+          this.state.responses.unshift(this.state.response);
+          this.setState({displayResponses: true})
+        }).catch((err) => {
+          console.log(err);
+        })
+    }
+  }
+
+  componentDidMount() {
+    const responsesRef = firebase.db.collection('posts').doc(this.state.date);
+    responsesRef.get()
+      .then(doc => {
+        const responsesData = doc.data();
+        const responsesEntires = Object.entries(responsesData);
+        responsesEntires.sort((a, b) => (a[0] === b[0]) ? 0 : (a[0] < b[0]) ? -1 : 1);
+        responsesEntires.reverse();
+        const responses = responsesEntires.map(([key, value]) => value)
+        this.setState({responses});
+      }).catch(err => {
+        console.log(err);
+      })
+  }
+  
+  render() {
+    return (
+      <div>
+      <Header date={this.state.date}/>
       <Special>
         <h1 className="preview">Question of the week</h1>
         <h1 className="headline">Would you prefer to use a traditional agent or mobile technology for your insurance coverage?</h1>
-        {/* <InputGroup className="mb-3">
-          <FormControl
-            placeholder="Your response"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-          />
-          <InputGroup.Append>
-            <Click variant="outline-danger">Submit</Click>
-          </InputGroup.Append>
-        </InputGroup> */}
-        <ListGroup>
-          <ListGroup.Item>Cras justo odio</ListGroup.Item>
-          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-        </ListGroup>
+        {
+          (!this.state.displayResponses) ? 
+          <InputGroup className="mb-3">
+            <FormControl
+              placeholder="Your response"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              onChange={(e) => this.setState({response: e.target.value})}
+            />
+            <InputGroup.Append>
+              <Click variant="outline-danger" onClick={() => this.submit()}>Submit</Click>
+            </InputGroup.Append>
+          </InputGroup> : ''
+        }
+        {
+          (this.state.displayResponses) ? 
+          <ListGroup>
+            { this.state.responses.map((response, i) => <ListGroup.Item className="text-center" key={i}>{response}</ListGroup.Item>) }
+          </ListGroup> : ''
+        }
       </Special>
       <Article title="Inside this issue" table center>
         <h1 className="titles">CONSTRUCTION</h1>
@@ -188,7 +234,8 @@ function App() {
       </Article>
       <Footer />
     </div>
-  );
+    );
+  }
 }
 
 export default App;
