@@ -77,12 +77,12 @@ class App extends Component {
     return (
       <div>
       <Header date={this.state.date} authors={this.state.authors}/>
-      <Special center>
-        <h1 className="header-title">MEME OF THE WEEK</h1>
+      <Article title="Meme of the week" center>
+        {/* <h1 className="header-title">MEME OF THE WEEK</h1> */}
         <img style={{height: '240px'}} src={meme} alt="Meme of the week"/>
-      </Special>
-      <Special>
-        <h1 className="headline">QUESTION OF THE WEEK</h1>
+      </Article>
+      <Article title="Question of the week" center>
+        {/* <h1 className="headline">QUESTION OF THE WEEK</h1> */}
         <h1 className="preview">For personal investments and finances, do you prefer to use fintech backed trading platforms (Robinhood, Acorns) or traditional brokerage applications (Fidelity, Schwab)?</h1>
         <InputGroup className="mb-3">
             <FormControl
@@ -97,7 +97,7 @@ class App extends Component {
             : <Click variant="outline-danger" onClick={() => this.submit()}>Submit</Click> }
             </InputGroup.Append>
           </InputGroup>
-      </Special>
+      </Article>
       <Article title="Inside this issue" table center>
         <h1 className="titles"><a className="sectionLink" href="#FINTECH">FINTECH</a></h1>
         <h1 className="titles"><a className="sectionLink" href="#TELEHEALTH">TELEHEALTH</a></h1>
