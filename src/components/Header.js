@@ -16,6 +16,9 @@ export default function Header(props) {
                         <div>
                             <h2 className="subtitle">{ props.date.toUpperCase() }</h2>
                         </div>
+                        <div>
+                            <h2 className="subtitle">CURATED BY: { props.authors.toUpperCase() }</h2>
+                        </div>
                         <div className="d-flex">
                             <h1 className="title">
                                 <strong>CORNELL VENTURE CAPITAL</strong>

@@ -20,3 +20,25 @@ a:hover {
   background-color: #A5312A;
   color: white;
 }
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.table th {
+  font-size: 20px;
+}
+
+.table td {
+  font-size: 18px;
+}
+
+.table img {
+  width: 64px;
+}
+
+.table a {
+  color: #A5312A;
+  text-decoration-line: underline;
+  font-weight: bold;
+}

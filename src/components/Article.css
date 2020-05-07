@@ -6,6 +6,17 @@
     padding: 18px 0;
 }
 
+.sectionLink {
+    color: black;
+    border-bottom: 1px solid #DDD;
+}
+
+.sectionLink:hover {
+    cursor: pointer;
+    color: #A5312A;
+    text-decoration: none;
+}
+
 .article {
     margin-top: 36px;
     margin-bottom: 36px;
@@ -30,6 +41,8 @@
 
 .article-img {
     width: 100%;
+    object-fit: cover;
+    max-height: 400px;
 }
 
 .article-content {
@@ -38,16 +51,17 @@
 
 .titles {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .headline { 
     font-weight: bold;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .preview {
-    font-size: 24px
+    font-size: 20px;
+    line-height: 32px;
 }
 
 .borderRight {

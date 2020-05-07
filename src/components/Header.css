@@ -15,7 +15,7 @@ h1, h2, p {
       ), url("../assets/img/header-background.png");
     background-size: 100%;
     width: 100%;
-    min-height: 30vh;
+    min-height: 32vh;
 }
 
 .header-content {
