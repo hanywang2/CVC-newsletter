@@ -78,11 +78,11 @@ class App extends Component {
       <div>
       <Header date={this.state.date} authors={this.state.authors}/>
       <Special center>
-        <h1 className="header-title">Meme of the week</h1>
+        <h1 className="header-title">MEME OF THE WEEK</h1>
         <img style={{height: '240px'}} src={meme} alt="Meme of the week"/>
       </Special>
       <Special>
-        <h1 className="headline">Question of the week</h1>
+        <h1 className="headline">QUESTION OF THE WEEK</h1>
         <h1 className="preview">For personal investments and finances, do you prefer to use fintech backed trading platforms (Robinhood, Acorns) or traditional brokerage applications (Fidelity, Schwab)?</h1>
         <InputGroup className="mb-3">
             <FormControl
@@ -108,7 +108,7 @@ class App extends Component {
         <Row>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              Four Clues To The Future Of Financial Services Firms And Fintech
+              Four Clues to the Future of Financial Services Firms and Fintech
             </h1>
             <p className="preview">
               As I write this, I can’t help thinking about what my ‘new normal’ looks like. The less than perfect moments involve me turning around and yelling at the dog to stop barking at the rare person who goes past our front door...
@@ -119,7 +119,7 @@ class App extends Component {
           </Col>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              Despite Current Environment, Fintech Startups Continue To Hire And Raise Funds
+              Despite Current Environment, Fintech Startups Continue to Hire and Raise Funds
             </h1>
             <p className="preview">
             COVID-19 is pushing companies to accelerate their innovations in a matter of weeks rather than years, such as accepting mobile payments or giving their brick-and-mortar store an online presence...
@@ -232,7 +232,7 @@ class App extends Component {
           </Col>
           <Col lg={4}>
             <h1 className="headline">
-              5 Reasons Why Telehealth Is Here To Stay (COVID-19 And Beyond)
+              5 Reasons Why Telehealth Is Here to Stay (COVID-19 and Beyond)
             </h1>
             <p className="preview">
             Telehealth. It’s no longer just a nice-to-have, but instead a must-have for patients and healthcare professionals alike during these uncertain times the COVID-19 pandemic has brought about. While we all wish that it hadn’t taken a pandemic to propel telehealth forward, for better or for worse, it has. The spotlight is now on telehealth in a big way, and for good reason...
