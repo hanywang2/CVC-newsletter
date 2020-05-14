@@ -79,7 +79,7 @@ class App extends Component {
       <Header date={this.state.date} authors={this.state.authors}/>
       <Article title="Meme of the week" center>
         {/* <h1 className="header-title">MEME OF THE WEEK</h1> */}
-        <img style={{height: '240px'}} src={meme} alt="Meme of the week"/>
+        <img style={{height: '240px', maxWidth: '100%'}} src={meme} alt="Meme of the week"/>
       </Article>
       <Article title="Question of the week" center>
         {/* <h1 className="headline">QUESTION OF THE WEEK</h1> */}
