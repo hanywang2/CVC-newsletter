@@ -25,7 +25,7 @@ import startup2a from './assets/startup2a.png';
 import startup2b from './assets/startup2b.png';
 import startup2c from './assets/startup2c.png';
 
-import podcast from './assets/img/4-30/podcast.jpg';
+import podcast from './assets/podcast.png';
 
 class App extends Component {
 
@@ -33,8 +33,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      date: 'May 7, 2020',
-      authors: 'Timothy Shi and Matthew Tan',
+      date: 'May 14, 2020',
+      authors: 'Rushi Patel and Ishan Bhatt',
       response: '',
       // responses : [],
       displayResponses: false
@@ -83,7 +83,9 @@ class App extends Component {
       </Article>
       <Article title="Question of the week" center>
         {/* <h1 className="headline">QUESTION OF THE WEEK</h1> */}
-        <h1 className="preview">For personal investments and finances, do you prefer to use fintech backed trading platforms (Robinhood, Acorns) or traditional brokerage applications (Fidelity, Schwab)?</h1>
+        <h1 className="preview">
+        Where do you see the alternative proteins market in five years? Are there any specific products that you enjoy or dislike?
+        </h1>
         <InputGroup className="mb-3">
             <FormControl
               disabled={this.state.displayResponses}
@@ -99,44 +101,44 @@ class App extends Component {
           </InputGroup>
       </Article>
       <Article title="Inside this issue" table center>
-        <h1 className="titles"><a className="sectionLink" href="#FINTECH">FINTECH</a></h1>
-        <h1 className="titles"><a className="sectionLink" href="#TELEHEALTH">TELEHEALTH</a></h1>
+        <h1 className="titles"><a className="sectionLink" href="#B2B MARKETPLACES">B2B MARKETPLACES</a></h1>
+        <h1 className="titles"><a className="sectionLink" href="#ALTERNATIVE PROTEIN">ALTERNATIVE PROTEIN</a></h1>
         <h1 className="titles"><a className="sectionLink" href="#PODCAST OTW">PODCAST OF THE WEEK</a></h1>
         <h1 className="titles"><a className="sectionLink" href="#TERM OF THE WEEK">TERM OF THE WEEK</a></h1>
       </Article>
-      <Article id="p1" title="FINTECH" img={topic1}>
+      <Article title="B2B MARKETPLACES" img={topic1}>
         <Row>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              Four Clues to the Future of Financial Services Firms and Fintech
+            Why B2B Ecommerce Needs to Replicate the B2C Experience
             </h1>
             <p className="preview">
-              As I write this, I can’t help thinking about what my ‘new normal’ looks like. The less than perfect moments involve me turning around and yelling at the dog to stop barking at the rare person who goes past our front door...
+            The more ways in which you can infuse the B2C experience into your B2B buying cycle, the more customers you’ll close and the more likely you’ll retain them for the long haul...
             </p>
             <Button href="
-            https://www.forbes.com/sites/martinboyd/2020/05/06/four-clues-to-the-future-of-financial-services-firms-and-fintech/#a850fab3222e
+            https://thepaypers.com/interviews/why-b2b-ecommerce-needs-to-replicate-the-b2c-experience-enterpay--1242159
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              Despite Current Environment, Fintech Startups Continue to Hire and Raise Funds
+            How COVID-19 Could Accelerate AI Adoption in the B2B Marketing Industry 
             </h1>
             <p className="preview">
-            COVID-19 is pushing companies to accelerate their innovations in a matter of weeks rather than years, such as accepting mobile payments or giving their brick-and-mortar store an online presence...
+            The COVID-19 pandemic is forcing marketers to think of new, innovative ways to generate revenue, pushing them to evaluate what technologies can best be utilized to enhance their strategies and fulfill their KPIs...
             </p>
             <Button href="
-            https://news.crunchbase.com/news/despite-current-environment-financial-services-hire-and-raise-funds/
+            https://www.aithority.com/guest-authors/how-covid-19-could-accelerate-ai-adoption-in-the-b2b-marketing-industry/
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4}>
             <h1 className="headline">
-            How Fintech Can Save Us From Covid-19
+            Technology Adoption Can Help SMEs Reach New Customers
             </h1>
             <p className="preview">
-            Financial technology is not being employed to its best effect, while the coronavirus financial relief effort is struggling. Banks need to innovate and work with fintechs if they are to ensure that the most vulnerable do not get left behind...
+            As consumer behaviours change and new practices take precedence, the business ecosystem will also have to adjust to ensure that the companies that are around today will remain here tomorrow...
             </p>
             <Button href="
-            https://www.euromoney.com/article/b1lhggklb7jbkw/how-fintech-can-save-us-from-covid-19
+            https://www.thestar.com.my/business/smebiz/2020/05/09/technology-adoption-can-help-smes-reach-new-customers
             " pos="center">Read More</Button>
           </Col>
         </Row>
@@ -162,14 +164,14 @@ class App extends Component {
                   </td>
                   <td>
                     <a href="
-                    https://www.nium.com/
+                    https://www.materialbank.com/
                     " target="_blank" rel="noopener noreferrer">
-                      Nium
+                      Material Bank
                     </a>
                   </td>
-                  <td>2014</td>
-                  <td>Series C</td>
-                  <td>$59M</td>
+                  <td>2018</td>
+                  <td>Series B</td>
+                  <td>$28M</td>
                 </tr>
                 <tr>
                 <td>
@@ -177,14 +179,14 @@ class App extends Component {
                 </td>
                   <td>
                     <a href="
-                    https://silamoney.com/
+                    https://backlotcars.com
                     " target="_blank" rel="noopener noreferrer">
-                      Sila
+                      Backlot Cars
                     </a>
                   </td>
-                  <td>2018</td>
-                  <td>Seed</td>
-                  <td>$7.7M</td>
+                  <td>2014</td>
+                  <td>Series B</td>
+                  <td>$37.8M</td>
                 </tr>
                 <tr>
                 <td>
@@ -192,53 +194,53 @@ class App extends Component {
                 </td>
                   <td>
                     <a href="
-                    https://www.neatcommerce.com/
+                    https://equipmentshare.com
                     " target="_blank" rel="noopener noreferrer">
-                      Neat
+                      EquipmentShare
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$16M</td>
+                  <td>2014</td>
+                  <td>Series C</td>
+                  <td>$68.9M</td>
                 </tr>
               </tbody>
             </Table>
           </Col>
         </Row>
       </Article>
-      <Article title="TELEHEALTH" img={topic2}>
+      <Article title="ALTERNATIVE PROTEIN" img={topic2}>
         <Row>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              COVID-19 Shocks the Digital Health Market, but the Jolt may be Positive News
+            Plant-based Protein Industry Raises $741 Million in Investments During COVID-19
             </h1>
             <p className="preview">
-            Early predictions for 2020 showed the digital health market was predicted to decline. Yet, as tech companies across the globe deal with fallout from the COVID-19 pandemic, some areas of digital health seem to be benefiting from the demand for digitally assisted healthcare...
+            Plant-based protein companies in the United States have raised a total of $741 million in investment capital within the first quarter of 2020—nearly matching a record $747 million raised in all of 2019...
             </p>
             <Button href="
-            https://siliconangle.com/2020/05/06/virtual-solutions-take-center-stage-as-covid-19-shakes-the-digital-health-market-thecube/
+            https://vegnews.com/2020/5/plant-based-protein-industry-raises-741-million-in-investments-during-covid-19
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-              The Make-or-break Opportunity for Telehealth Startups
+            Alternative Animal Protein Investments on the Rise
             </h1>
             <p className="preview">
-            In late March, Klara cofounders Simon Bolz and Simon Lorenz had a make-or-break talk with their engineering team. The healthcare communication platform had just received dozens of calls from healthcare facilities urgently asking for ways to treat patients remotely via videolink...
+            “Investors have seen the market opportunity and are moving to capitalize on a global shift in the way meat is produced,” said Caroline Bushnell, associate director of corporate engagement for the GFI...
             </p>
             <Button href="
-            https://sifted.eu/articles/telehealth-startups-coronavirus/
+            https://www.bakingbusiness.com/articles/50979-alternative-animal-protein-investments-on-the-rise
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4}>
             <h1 className="headline">
-              5 Reasons Why Telehealth Is Here to Stay (COVID-19 and Beyond)
+            Coronavirus Meat Shortages Have Plant-Based Food Makers’ Mouths Watering
             </h1>
             <p className="preview">
-            Telehealth. It’s no longer just a nice-to-have, but instead a must-have for patients and healthcare professionals alike during these uncertain times the COVID-19 pandemic has brought about. While we all wish that it hadn’t taken a pandemic to propel telehealth forward, for better or for worse, it has. The spotlight is now on telehealth in a big way, and for good reason...
+            Companies like Beyond Meat Inc., Impossible Foods Inc. and Tofurky Co. say they are ramping up production, discounting their plant-based meat alternatives to appeal to more consumers and expanding into more stores...
             </p>
             <Button href="
-            https://www.forbes.com/sites/joeharpaz/2020/05/04/5-reasons-why-telehealth-here-to-stay-covid19/#5ca1dc453fb0
+            https://www.wsj.com/articles/coronavirus-meat-shortages-have-plant-based-food-makers-mouths-watering-11589371206
             " pos="center">Read More</Button>
           </Col>
         </Row>
@@ -264,14 +266,20 @@ class App extends Component {
                   </td>
                   <td>
                     <a href="
-                    https://www.medici.md/
+                    https://www.memphismeats.com/
                     " target="_blank" rel="noopener noreferrer">
-                      Medici
+                      Memphis Meat
                     </a>
                   </td>
-                  <td>2016</td>
-                  <td>Series B</td>
-                  <td>$70.6M</td>
+                  <td>
+                    2015
+                  </td>
+                  <td>
+                    Series B
+                  </td>
+                  <td>
+                    $211M
+                  </td>
                 </tr>
                 <tr>
                 <td>
@@ -279,14 +287,20 @@ class App extends Component {
                 </td>
                   <td>
                     <a href="
-                    http://www.98point6.com/
+                    https://solarfoods.fi/
                     " target="_blank" rel="noopener noreferrer">
-                      98point6
+                      Solar Foods
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Venture Round</td>
-                  <td>$129.3M</td>
+                  <td>
+                    2017
+                  </td>
+                  <td>
+                  Convertible Note
+                  </td>
+                  <td>
+                  $5.98M
+                  </td>
                 </tr>
                 <tr>
                 <td>
@@ -294,14 +308,20 @@ class App extends Component {
                 </td>
                   <td>
                     <a href="
-                    http://www.tytocare.com/
+                    https://oceanhuggerfoods.com/
                     " target="_blank" rel="noopener noreferrer">
-                      TytoCare
+                      Ocean Hugger Food
                     </a>
                   </td>
-                  <td>2012</td>
-                  <td>Venture Round</td>
-                  <td>$106.7M</td>
+                  <td>
+                    2015
+                  </td>
+                  <td>
+                    Debt
+                  </td>
+                  <td>
+                    $3.3M
+                  </td>
                 </tr>
               </tbody>
             </Table>
@@ -310,19 +330,21 @@ class App extends Component {
       </Article>
       <Article title="PODCAST OTW" img={podcast}>
         <h1 className="headline">
-          An Update on Consumer & Enterprise Venture Capital - Invest Like the Best
+        Hustle Fund's Elizabeth Yin on unique portfolio strategy, post-COVID fundraising optimism
         </h1>
         <p className="preview">
-          Patrick O'shaughnessy’s podcast includes interviews of the established investors and their outlook on investing. This episode features Bill Gurley and Chetan Puttagunta, partners at Benchmark Capital, and discusses early stage investing during the hectic period of COVID-19. They examine previous downturns, the early stage environment, and enterprise businesses
+        Jason Calacanis’s podcast includes an interview with Elizabeth Yin, Hustle Fund’s Co-Founder, about post-COVID investments as a “Micro-VC fund”. The podcast delves into Hustle Fund’s investment strategy, the role of prior angel investments, and its long-term outlooks. Hustle Fund is a unique VC firm that prioritizes a startup’s speed of execution and has raised over $60 million in two rounds.
         </p>
-        <Button href="https://podcasts.google.com/?feed=aHR0cHM6Ly9pbnZlc3RsaWtldGhlYmVzdC5saWJzeW4uY29tL3Jzcw&episode=NGVkNGQwODktNDI5OC00OGFmLTljN2QtMDk0MjEyMzAwZjY2&hl=en&ved=2ahUKEwjvyN64moXpAhWegXIEHYhaDNwQjrkEegQIChAG&ep=6" pos="center">Listen Here</Button>
+        <Button href="
+        https://www.youtube.com/watch?v=rp49sTTDFx0
+        " pos="center">Listen Here</Button>
       </Article>
       <Article title='TERM OF THE WEEK'>
       <h1 className="headline text-center">
-        What is "Venture Capital"?
+        What is "Angel Investor"?
       </h1>
       <p className="preview text-center">
-        Venture capital is a form of private equity and a type of financing that investors provide to startup companies and small businesses that are believed to have long-term growth potential. Venture capital generally comes from well-off investors, investment banks and any other financial institutions. However, it does not always take a monetary form; it can also be provided in the form of technical or managerial expertise. Venture capital is typically allocated to small companies with exceptional growth potential, or to companies that have grown quickly and appear poised to continue to expand.
+      Angel investors are generally high net worth individuals who provide financing for startups in exchange for convertible debt or ownership equity in the company. Angel investments typically precede a Seed Round and usually occur when the startup is in its infancy or getting off the ground. Angel investors can be family / friends, wealthy individuals, part of a syndicated group, or originate from crowdfunding. In 2010, the website AngelList was founded to connect startups, angel investors, and job seekers. 
       </p>
       </Article>
       <Footer />
