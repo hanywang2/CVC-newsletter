@@ -341,7 +341,7 @@ class App extends Component {
       </Article>
       <Article title='TERM OF THE WEEK'>
       <h1 className="headline text-center">
-        What is "Angel Investor"?
+        What is an "Angel Investor"?
       </h1>
       <p className="preview text-center">
       Angel investors are generally high net worth individuals who provide financing for startups in exchange for convertible debt or ownership equity in the company. Angel investments typically precede a Seed Round and usually occur when the startup is in its infancy or getting off the ground. Angel investors can be family / friends, wealthy individuals, part of a syndicated group, or originate from crowdfunding. In 2010, the website AngelList was founded to connect startups, angel investors, and job seekers. 
