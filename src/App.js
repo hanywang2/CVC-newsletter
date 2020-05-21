@@ -33,8 +33,12 @@ class App extends Component {
     super(props);
 
     this.state = {
-      date: 'May 14, 2020',
-      authors: 'Rushi Patel and Ishan Bhatt',
+      date: 'May 21, 2020',
+      authors: 'Raghav Madhukar and Weldon Chan',
+      topic: {
+        topic1: 'EV & MOBILITY',
+        topic2: 'VERTICAL FARMING'
+      },
       response: '',
       // responses : [],
       displayResponses: false
@@ -82,9 +86,8 @@ class App extends Component {
         <img style={{width: '460px', maxWidth: '100%'}} src={meme} alt="Meme of the week"/>
       </Article>
       <Article title="Question of the week" center>
-        {/* <h1 className="headline">QUESTION OF THE WEEK</h1> */}
         <h1 className="preview">
-        Where do you see the alternative proteins market in five years? Are there any specific products that you enjoy or dislike?
+        In 10-20 years, how large do you think the electric car market will be with respect to the regular car market?
         </h1>
         <InputGroup className="mb-3">
             <FormControl
@@ -101,44 +104,44 @@ class App extends Component {
           </InputGroup>
       </Article>
       <Article title="Inside this issue" table center>
-        <h1 className="titles"><a className="sectionLink" href="#B2B MARKETPLACES">B2B MARKETPLACES</a></h1>
-        <h1 className="titles"><a className="sectionLink" href="#ALTERNATIVE PROTEIN">ALTERNATIVE PROTEIN</a></h1>
+        <h1 className="titles"><a className="sectionLink" href={`#${this.state.topic.topic1}`}>{this.state.topic.topic1}</a></h1>
+        <h1 className="titles"><a className="sectionLink" href={`#${this.state.topic.topic2}`}>{this.state.topic.topic2}</a></h1>
         <h1 className="titles"><a className="sectionLink" href="#PODCAST OTW">PODCAST OF THE WEEK</a></h1>
         <h1 className="titles"><a className="sectionLink" href="#TERM OF THE WEEK">TERM OF THE WEEK</a></h1>
       </Article>
-      <Article title="B2B MARKETPLACES" img={topic1}>
+      <Article title={this.state.topic.topic1} img={topic1}>
         <Row>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-            Why B2B Ecommerce Needs to Replicate the B2C Experience
+            Electric Car Sales Doubled in the Midst of the Coronacrisis
             </h1>
             <p className="preview">
-            The more ways in which you can infuse the B2C experience into your B2B buying cycle, the more customers you’ll close and the more likely you’ll retain them for the long haul...
+            Registrations of battery electric vehicles (BEV) in Europe doubled during the first months of 2020, while overall passenger cars fell by 25.6% compared to the same period last year. Data by the European Alternative Fuels Observatory (EAFO) shows that electric cars still only accounted for 4% of total.
             </p>
             <Button href="
-            https://thepaypers.com/interviews/why-b2b-ecommerce-needs-to-replicate-the-b2c-experience-enterpay--1242159
+            https://www.forbes.com/sites/emanuelabarbiroglio/2020/05/20/electric-cars-sales-doubled-in-the-midst-of-coronacrisis/#6e4489394c42
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-            How COVID-19 Could Accelerate AI Adoption in the B2B Marketing Industry 
+            Past its Peak? Battered Oil Demand Faces Threat from Electric Vehicles
             </h1>
             <p className="preview">
-            The COVID-19 pandemic is forcing marketers to think of new, innovative ways to generate revenue, pushing them to evaluate what technologies can best be utilized to enhance their strategies and fulfill their KPIs...
+            With fuel for road transport accounting for about half of all oil demand, the possibility of a faster-than-expected switch to EVs in the wake of the pandemic is one of the main reasons some forecasts for a peak have been brought forward.
             </p>
             <Button href="
-            https://www.aithority.com/guest-authors/how-covid-19-could-accelerate-ai-adoption-in-the-b2b-marketing-industry/
+            https://auto.hindustantimes.com/auto/news/past-its-peak-battered-oil-demand-faces-threat-from-electric-vehicles-41589944248215.html
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4}>
             <h1 className="headline">
-            Technology Adoption Can Help SMEs Reach New Customers
+            Liberty Global Forms Alliance to Create UK Car Charging Network
             </h1>
             <p className="preview">
-            As consumer behaviours change and new practices take precedence, the business ecosystem will also have to adjust to ensure that the companies that are around today will remain here tomorrow...
+            Liberty Global has struck a deal with a fund backed by the UK government and the Church of England to build a network of electric vehicle charging points in residential streets using the underground duct network of its Virgin Media business.
             </p>
             <Button href="
-            https://www.thestar.com.my/business/smebiz/2020/05/09/technology-adoption-can-help-smes-reach-new-customers
+            https://www.ft.com/content/388012da-11eb-43da-b810-2c1ff7aabb7a
             " pos="center">Read More</Button>
           </Col>
         </Row>
@@ -164,14 +167,14 @@ class App extends Component {
                   </td>
                   <td>
                     <a href="
-                    https://www.materialbank.com/
+                    https://www.wallbox.com/
                     " target="_blank" rel="noopener noreferrer">
-                      Material Bank
+                      Wallbox
                     </a>
                   </td>
-                  <td>2018</td>
-                  <td>Series B</td>
-                  <td>$28M</td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
                 </tr>
                 <tr>
                 <td>
@@ -179,14 +182,14 @@ class App extends Component {
                 </td>
                   <td>
                     <a href="
-                    https://backlotcars.com
+                    https://freewiretech.com/
                     " target="_blank" rel="noopener noreferrer">
-                      Backlot Cars
+                      FreeWire Technologies
                     </a>
                   </td>
                   <td>2014</td>
                   <td>Series B</td>
-                  <td>$37.8M</td>
+                  <td>$55.2M</td>
                 </tr>
                 <tr>
                 <td>
@@ -194,53 +197,53 @@ class App extends Component {
                 </td>
                   <td>
                     <a href="
-                    https://equipmentshare.com
+                    https://www.electriphi.ai/
                     " target="_blank" rel="noopener noreferrer">
-                      EquipmentShare
+                      Electriphi
                     </a>
                   </td>
-                  <td>2014</td>
-                  <td>Series C</td>
-                  <td>$68.9M</td>
+                  <td>2018</td>
+                  <td>Seed</td>
+                  <td>$3.5M</td>
                 </tr>
               </tbody>
             </Table>
           </Col>
         </Row>
       </Article>
-      <Article title="ALTERNATIVE PROTEIN" img={topic2}>
+      <Article title={this.state.topic.topic2} img={topic2}>
         <Row>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-            Plant-based Protein Industry Raises $741 Million in Investments During COVID-19
+            Vertical Farms Boom as COVID-19 Bolsters Appetite for Locally Grown Food
             </h1>
             <p className="preview">
-            Plant-based protein companies in the United States have raised a total of $741 million in investment capital within the first quarter of 2020—nearly matching a record $747 million raised in all of 2019...
+            Vertical farms — indoor spaces where climate and light are tightly controlled — were already expanding in urban areas before the pandemic struck. Since they control everything from seed to store, vertical farms can provide skittish consumers with information about where their food comes from and how it’s produced...
             </p>
             <Button href="
-            https://vegnews.com/2020/5/plant-based-protein-industry-raises-741-million-in-investments-during-covid-19
+            https://karmaimpact.com/vertical-farms-boom-as-covid-19-bolsters-appetite-for-locally-grown-food/
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4} className="borderRight">
             <h1 className="headline">
-            Alternative Animal Protein Investments on the Rise
+            Vertical Farms Provide Sustainability in a Post-Covid World
             </h1>
             <p className="preview">
-            “Investors have seen the market opportunity and are moving to capitalize on a global shift in the way meat is produced,” said Caroline Bushnell, associate director of corporate engagement for the GFI...
+            Vertical Fields offers a revolutionary way to eat the freshest greens and herbs, by producing soil based indoor vertical farms grown at the very location where food is consumed,” said Vertical Field’s Chief Executive Officer, Guy Elitzur of Ra’anana, Israel who is hoping to place his ‘vertical farms’ in retail chains and restaurants establishments in cities throughout the US.
             </p>
             <Button href="
-            https://www.bakingbusiness.com/articles/50979-alternative-animal-protein-investments-on-the-rise
+            https://www.hortidaily.com/article/9214186/vertical-farms-provide-sustainability-in-a-post-covid-world/
             " pos="center">Read More</Button>
           </Col>
           <Col lg={4}>
             <h1 className="headline">
-            Coronavirus Meat Shortages Have Plant-Based Food Makers’ Mouths Watering
+            Why the Indoor Farming Movement is Taking Off
             </h1>
             <p className="preview">
-            Companies like Beyond Meat Inc., Impossible Foods Inc. and Tofurky Co. say they are ramping up production, discounting their plant-based meat alternatives to appeal to more consumers and expanding into more stores...
+            As the world emerges from a pandemic that has kept about one in five people in their homes for weeks, it's little surprise that the idea of indoor farming is gaining traction. After all, we've had a lot of time to think about what we can do indoors — and maybe even ponder what we may have done outdoors that contributed to this mess.
             </p>
             <Button href="
-            https://www.wsj.com/articles/coronavirus-meat-shortages-have-plant-based-food-makers-mouths-watering-11589371206
+            https://www.mnn.com/your-home/organic-farming-gardening/stories/indoor-farming-study-obstacles-growth-potential
             " pos="center">Read More</Button>
           </Col>
         </Row>
@@ -266,9 +269,51 @@ class App extends Component {
                   </td>
                   <td>
                     <a href="
-                    https://www.memphismeats.com/
+                    https://urbancropsolutions.com/
                     " target="_blank" rel="noopener noreferrer">
-                      Memphis Meat
+                      Urban Crop Solutions
+                    </a>
+                  </td>
+                  <td>
+                    2014
+                  </td>
+                  <td>
+                    Series A
+                  </td>
+                  <td>
+                    $4.8M
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                  <img src={startup2b} alt="Startup"/>
+                </td>
+                  <td>
+                    <a href="
+                    https://www.infarm.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Infarm
+                    </a>
+                  </td>
+                  <td>
+                    2013
+                  </td>
+                  <td>
+                    Series B
+                  </td>
+                  <td>
+                    $134.5M
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                  <img src={startup2c} alt="Startup"/>
+                </td>
+                  <td>
+                    <a href="
+                    https://www.agricool.co/en/
+                    " target="_blank" rel="noopener noreferrer">
+                      Agricool
                     </a>
                   </td>
                   <td>
@@ -278,49 +323,7 @@ class App extends Component {
                     Series B
                   </td>
                   <td>
-                    $211M
-                  </td>
-                </tr>
-                <tr>
-                <td>
-                  <img src={startup2b} alt="Startup"/>
-                </td>
-                  <td>
-                    <a href="
-                    https://solarfoods.fi/
-                    " target="_blank" rel="noopener noreferrer">
-                      Solar Foods
-                    </a>
-                  </td>
-                  <td>
-                    2017
-                  </td>
-                  <td>
-                  Convertible Note
-                  </td>
-                  <td>
-                  $5.98M
-                  </td>
-                </tr>
-                <tr>
-                <td>
-                  <img src={startup2c} alt="Startup"/>
-                </td>
-                  <td>
-                    <a href="
-                    https://oceanhuggerfoods.com/
-                    " target="_blank" rel="noopener noreferrer">
-                      Ocean Hugger Food
-                    </a>
-                  </td>
-                  <td>
-                    2015
-                  </td>
-                  <td>
-                    Debt
-                  </td>
-                  <td>
-                    $3.3M
+                    $38.9M
                   </td>
                 </tr>
               </tbody>
@@ -330,21 +333,21 @@ class App extends Component {
       </Article>
       <Article title="PODCAST OTW" img={podcast}>
         <h1 className="headline">
-        Hustle Fund's Elizabeth Yin on unique portfolio strategy, post-COVID fundraising optimism
+        The David Rubenstein Show: Didi President Jean Liu
         </h1>
         <p className="preview">
-        Jason Calacanis’s podcast includes an interview with Elizabeth Yin, Hustle Fund’s Co-Founder, about post-COVID investments as a “Micro-VC fund”. The podcast delves into Hustle Fund’s investment strategy, the role of prior angel investments, and its long-term outlooks. Hustle Fund is a unique VC firm that prioritizes a startup’s speed of execution and has raised over $60 million in two rounds.
+        In this podcast interview, David Rubenstein speaks to one of the most powerful women business executives in China and the world, Ms. Jean Liu of Didi. They discuss the emergence of Didi as a ride-sharing powerhouse in China, its expansion to global markets, and her own personal back story. The interview gives viewers an excellent glimpse into the effort, leadership and strategy it takes to successfully run a game-changing technology enterprise.
         </p>
         <Button href="
-        https://www.youtube.com/watch?v=rp49sTTDFx0
+        https://www.youtube.com/watch?v=0-iphU-n8RM
         " pos="center">Listen Here</Button>
       </Article>
       <Article title='TERM OF THE WEEK'>
       <h1 className="headline text-center">
-        What is an "Angel Investor"?
+      What are “Pro Rata Rights”? 
       </h1>
       <p className="preview text-center">
-      Angel investors are generally high net worth individuals who provide financing for startups in exchange for convertible debt or ownership equity in the company. Angel investments typically precede a Seed Round and usually occur when the startup is in its infancy or getting off the ground. Angel investors can be family / friends, wealthy individuals, part of a syndicated group, or originate from crowdfunding. In 2010, the website AngelList was founded to connect startups, angel investors, and job seekers. 
+      Pro Rata Rights refers to the rights of an existing investor to participate in subsequent rounds of the company’s funding to maintain their initial ownership percentage. These rights are generally demanded by early-stage investors, who use Pro Rata Rights to hedge against the large risk associated with early-stage companies. They can be especially helpful for investors who intend to keep their board seats and are required to maintain a certain percentage of ownership. Pro Rata Rights are a crucial factor that founders must evaluate when choosing their early investors. Founders should look for investors that can double as strategic advisors, as they will have the ability to maintain influential equity stakes in their companies.
       </p>
       </Article>
       <Footer />
