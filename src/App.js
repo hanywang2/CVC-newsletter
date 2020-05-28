@@ -90,7 +90,7 @@ class App extends Component {
       <div>
       <Confetti />
       <Header date={this.state.date} authors={this.state.authors}/>
-      <Article title='A BIG HOORA TO OUR SENIORS 🎉'>
+      <Article title='A BIG HOORAH TO OUR SENIORS 🎉'>
       <h1 className="headline text-center">
       Congratulations to our ten thinkers, dreamers, and doers for graduating this year!
       </h1>
