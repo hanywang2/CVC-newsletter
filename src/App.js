@@ -569,7 +569,7 @@ class App extends Component {
                     </a>
                   </td>
                   <td>2008</td>
-                  <td>Series E</td>
+                  <td>Series B</td>
                   <td>N/A</td>
                 </tr>
               </tbody>
@@ -586,7 +586,7 @@ class App extends Component {
             What is an industry you're interested in?
             </h1>
             <p className="preview">
-            Edtech : I think the current education system is in need of reform especially given the increasing importance and expectation of tech literacy. Additionally the COVID crisis has highlighted the inadequacy of the infrastructure to accommodate for the shifting needs of the students.
+            Edtech. I think the current education system is in need of reform especially given the increasing importance and expectation of tech literacy. Additionally the COVID crisis has highlighted the inadequacy of the infrastructure to accommodate for the shifting needs of the students.
             </p>
           </Col>
           <Col lg={12}>
