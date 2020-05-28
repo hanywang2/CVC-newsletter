@@ -221,7 +221,7 @@ class App extends Component {
             What is an industry you're interested in?
             </h1>
             <p className="preview">
-            Agrifood Tech (no surprises there). The food industry is going to change more in the next 10 years than it has in the last 30.The future of food is fast, fresh, and hungry for disruption, requiring new solutions to today's most pressing food production problems. We need to embrace and invest in the scientific and technological advances in food to build a more sustainable, inclusive, and innovative food future.
+            Agrifood Tech (no surprises there). The food industry is going to change more in the next 10 years than it has in the last 30. The future of food is fast, fresh, and hungry for disruption, requiring new solutions to today's most pressing food production problems. We need to embrace and invest in the scientific and technological advances in food to build a more sustainable, inclusive, and innovative food future.
             </p>
           </Col>
           <Col lg={12}>
