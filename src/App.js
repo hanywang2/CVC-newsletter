@@ -13,19 +13,18 @@ import { Row, Col, InputGroup, FormControl, Button as Click, Table } from 'react
 
 import './App.css';
 
-import meme from './assets/meme.jpg';
+import matt from './assets/seniors/matt.png';
+import david from './assets/seniors/david.png';
+import zach from './assets/seniors/zach.png';
+import shen from './assets/seniors/shen.png';
+import mason from './assets/seniors/mason.png';
+import jeff from './assets/seniors/jeff.png';
+import christophe from './assets/seniors/christophe.png';
+import deal from './assets/seniors/deal.png';
+import claire from './assets/seniors/claire.png';
+import grace from './assets/seniors/grace.png';
 
-import topic1 from './assets/topic1.jpg';
 import startup1a from './assets/startup1a.png';
-import startup1b from './assets/startup1b.png';
-import startup1c from './assets/startup1c.png';
-
-import topic2 from './assets/topic2.jpg';
-import startup2a from './assets/startup2a.png';
-import startup2b from './assets/startup2b.png';
-import startup2c from './assets/startup2c.png';
-
-import podcast from './assets/podcast.png';
 
 class App extends Component {
 
@@ -34,7 +33,7 @@ class App extends Component {
 
     this.state = {
       date: 'May 21, 2020',
-      authors: 'Raghav Madhukar and Weldon Chan',
+      authors: 'The CVC Newsletter Team ❤️',
       topic: {
         topic1: 'EV & MOBILITY',
         topic2: 'VERTICAL FARMING'
@@ -81,80 +80,45 @@ class App extends Component {
     return (
       <div>
       <Header date={this.state.date} authors={this.state.authors}/>
-      <Article title="Meme of the week" center>
-        {/* <h1 className="header-title">MEME OF THE WEEK</h1> */}
-        <img style={{width: '460px', maxWidth: '100%'}} src={meme} alt="Meme of the week"/>
+      <Article title='A BIG HOORA TO OUR SENIORS 🎉'>
+      <h1 className="headline text-center">
+      What are “Pro Rata Rights”? 
+      </h1>
+      <p className="preview text-center">
+      Pro Rata Rights refers to the rights of an existing investor to participate in subsequent rounds of the company’s funding to maintain their initial ownership percentage. These rights are generally demanded by early-stage investors, who use Pro Rata Rights to hedge against the large risk associated with early-stage companies. They can be especially helpful for investors who intend to keep their board seats and are required to maintain a certain percentage of ownership. Pro Rata Rights are a crucial factor that founders must evaluate when choosing their early investors. Founders should look for investors that can double as strategic advisors, as they will have the ability to maintain influential equity stakes in their companies.
+      </p>
       </Article>
-      <Article title="Question of the week" center>
-        <h1 className="preview">
-        In 10-20 years, how large do you think the electric car market will be with respect to the regular car market?
-        </h1>
-        <InputGroup className="mb-3">
-            <FormControl
-              disabled={this.state.displayResponses}
-              placeholder="Your response"
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
-              onChange={(e) => this.setState({response: e.target.value})}
-            />
-            <InputGroup.Append>
-            { (this.state.displayResponses) ? <Click variant="danger">Submitted</Click>
-            : <Click variant="outline-danger" onClick={() => this.submit()}>Submit</Click> }
-            </InputGroup.Append>
-          </InputGroup>
-      </Article>
-      <Article title="Inside this issue" table center>
-        <h1 className="titles"><a className="sectionLink" href={`#${this.state.topic.topic1}`}>{this.state.topic.topic1}</a></h1>
-        <h1 className="titles"><a className="sectionLink" href={`#${this.state.topic.topic2}`}>{this.state.topic.topic2}</a></h1>
-        <h1 className="titles"><a className="sectionLink" href="#PODCAST OTW">PODCAST OF THE WEEK</a></h1>
-        <h1 className="titles"><a className="sectionLink" href="#TERM OF THE WEEK">TERM OF THE WEEK</a></h1>
-      </Article>
-      <Article title={this.state.topic.topic1} img={topic1}>
+      <Row>
+        <Col lg={6} md={6}>
+        <Article title="Matthew Salazar" img={matt}>
         <Row>
-          <Col lg={4} className="borderRight">
+          <Col lg={12}>
             <h1 className="headline">
-            Electric Car Sales Doubled in the Midst of the Coronacrisis
+            What is an industry you're interested in?
             </h1>
             <p className="preview">
-            Registrations of battery electric vehicles (BEV) in Europe doubled during the first months of 2020, while overall passenger cars fell by 25.6% compared to the same period last year. Data by the European Alternative Fuels Observatory (EAFO) shows that electric cars still only accounted for 4% of total.
+            Nanotechnology has potential to transform nearly all sectors including high cost industries such as healthcare, energy and water. The fragmented market for nanotech provides an incredible opportunity for standardization and innovation. I believe the financialization of this sector and others such as space tech and infrastructure tech will move from simple debt to equity or more complex debt structures.
             </p>
-            <Button href="
-            https://www.forbes.com/sites/emanuelabarbiroglio/2020/05/20/electric-cars-sales-doubled-in-the-midst-of-coronacrisis/#6e4489394c42
-            " pos="center">Read More</Button>
           </Col>
-          <Col lg={4} className="borderRight">
-            <h1 className="headline">
-            Past its Peak? Battered Oil Demand Faces Threat from Electric Vehicles
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
             </h1>
             <p className="preview">
-            With fuel for road transport accounting for about half of all oil demand, the possibility of a faster-than-expected switch to EVs in the wake of the pandemic is one of the main reasons some forecasts for a peak have been brought forward.
+            Don’t stop learning! Taking the opportunity to learn a new skill or a new subject in depth pays dividends not only locally and ephemerally, but also by permanently expanding your problem-solving approaches and creativity across all subjects.
             </p>
-            <Button href="
-            https://auto.hindustantimes.com/auto/news/past-its-peak-battered-oil-demand-faces-threat-from-electric-vehicles-41589944248215.html
-            " pos="center">Read More</Button>
-          </Col>
-          <Col lg={4}>
-            <h1 className="headline">
-            Liberty Global Forms Alliance to Create UK Car Charging Network
-            </h1>
-            <p className="preview">
-            Liberty Global has struck a deal with a fund backed by the UK government and the Church of England to build a network of electric vehicle charging points in residential streets using the underground duct network of its Virgin Media business.
-            </p>
-            <Button href="
-            https://www.ft.com/content/388012da-11eb-43da-b810-2c1ff7aabb7a
-            " pos="center">Read More</Button>
           </Col>
         </Row>
         <Row className="mt-3">
           <Col>
             <div className="text-center">
-              <h1 className="mid-title">Startups We're Looking At</h1>
+              <h1 className="mid-title">Favorite Startup</h1>
             </div>
             <Table hover className="mt-4" responsive>
               <thead>
                 <tr>
                   <th></th>
-                  <th>Startup</th>
+                  <th>Name</th>
                   <th>Founded</th>
                   <th>Last Round</th>
                   <th>Total Funded</th>
@@ -176,87 +140,42 @@ class App extends Component {
                   <td>Series A</td>
                   <td>$29.6M</td>
                 </tr>
-                <tr>
-                <td>
-                  <img src={startup1b} alt="Startup"/>
-                </td>
-                  <td>
-                    <a href="
-                    https://freewiretech.com/
-                    " target="_blank" rel="noopener noreferrer">
-                      FreeWire Technologies
-                    </a>
-                  </td>
-                  <td>2014</td>
-                  <td>Series B</td>
-                  <td>$55.2M</td>
-                </tr>
-                <tr>
-                <td>
-                  <img src={startup1c} alt="Startup"/>
-                </td>
-                  <td>
-                    <a href="
-                    https://www.electriphi.ai/
-                    " target="_blank" rel="noopener noreferrer">
-                      Electriphi
-                    </a>
-                  </td>
-                  <td>2018</td>
-                  <td>Seed</td>
-                  <td>$3.5M</td>
-                </tr>
               </tbody>
             </Table>
           </Col>
         </Row>
       </Article>
-      <Article title={this.state.topic.topic2} img={topic2}>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="David Larar" img={david}>
         <Row>
-          <Col lg={4} className="borderRight">
+          <Col lg={12}>
             <h1 className="headline">
-            Vertical Farms Boom as COVID-19 Bolsters Appetite for Locally Grown Food
+            What is an industry you're interested in?
             </h1>
             <p className="preview">
-            Vertical farms — indoor spaces where climate and light are tightly controlled — were already expanding in urban areas before the pandemic struck. Since they control everything from seed to store, vertical farms can provide skittish consumers with information about where their food comes from and how it’s produced...
+            Alternative Lending. Traditional credit scores are archaic and act as a barrier to prevent underserved populations from accessing modern FinTech tools.  Whether it be fields of crops, page views, or earnings potential, there are new ways to leverage data to underwrite the lending process in a manner that better serves traditionally neglected communities.
             </p>
-            <Button href="
-            https://karmaimpact.com/vertical-farms-boom-as-covid-19-bolsters-appetite-for-locally-grown-food/
-            " pos="center">Read More</Button>
           </Col>
-          <Col lg={4} className="borderRight">
-            <h1 className="headline">
-            Vertical Farms Provide Sustainability in a Post-Covid World
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
             </h1>
             <p className="preview">
-            Vertical Fields offers a revolutionary way to eat the freshest greens and herbs, by producing soil based indoor vertical farms grown at the very location where food is consumed,” said Vertical Field’s Chief Executive Officer, Guy Elitzur of Ra’anana, Israel who is hoping to place his ‘vertical farms’ in retail chains and restaurants establishments in cities throughout the US.
+            Don't complain about a problem, go and fix it. "If not me then who?" - Travis Manion 
             </p>
-            <Button href="
-            https://www.hortidaily.com/article/9214186/vertical-farms-provide-sustainability-in-a-post-covid-world/
-            " pos="center">Read More</Button>
-          </Col>
-          <Col lg={4}>
-            <h1 className="headline">
-            Why the Indoor Farming Movement is Taking Off
-            </h1>
-            <p className="preview">
-            As the world emerges from a pandemic that has kept about one in five people in their homes for weeks, it's little surprise that the idea of indoor farming is gaining traction. After all, we've had a lot of time to think about what we can do indoors — and maybe even ponder what we may have done outdoors that contributed to this mess.
-            </p>
-            <Button href="
-            https://www.mnn.com/your-home/organic-farming-gardening/stories/indoor-farming-study-obstacles-growth-potential
-            " pos="center">Read More</Button>
           </Col>
         </Row>
         <Row className="mt-3">
           <Col>
             <div className="text-center">
-              <h1 className="mid-title">Startups We're Looking At</h1>
+              <h1 className="mid-title">Favorite Startup</h1>
             </div>
             <Table hover className="mt-4" responsive>
               <thead>
                 <tr>
                   <th></th>
-                  <th>Startup</th>
+                  <th>Name</th>
                   <th>Founded</th>
                   <th>Last Round</th>
                   <th>Total Funded</th>
@@ -265,91 +184,448 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup2a} alt="Startup"/>
+                    <img src={startup1a} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://urbancropsolutions.com/
+                    https://neurodatalab.com/
                     " target="_blank" rel="noopener noreferrer">
-                      Urban Crop Solutions
+                      Neurodata Lab
                     </a>
                   </td>
-                  <td>
-                    2014
-                  </td>
-                  <td>
-                    Series A
-                  </td>
-                  <td>
-                    $4.8M
-                  </td>
-                </tr>
-                <tr>
-                <td>
-                  <img src={startup2b} alt="Startup"/>
-                </td>
-                  <td>
-                    <a href="
-                    https://www.infarm.com/
-                    " target="_blank" rel="noopener noreferrer">
-                      Infarm
-                    </a>
-                  </td>
-                  <td>
-                    2013
-                  </td>
-                  <td>
-                    Series B
-                  </td>
-                  <td>
-                    $134.5M
-                  </td>
-                </tr>
-                <tr>
-                <td>
-                  <img src={startup2c} alt="Startup"/>
-                </td>
-                  <td>
-                    <a href="
-                    https://www.agricool.co/en/
-                    " target="_blank" rel="noopener noreferrer">
-                      Agricool
-                    </a>
-                  </td>
-                  <td>
-                    2015
-                  </td>
-                  <td>
-                    Series B
-                  </td>
-                  <td>
-                    $38.9M
-                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
                 </tr>
               </tbody>
             </Table>
           </Col>
         </Row>
       </Article>
-      <Article title="PODCAST OTW" img={podcast}>
-        <h1 className="headline">
-        The David Rubenstein Show: Didi President Jean Liu
-        </h1>
-        <p className="preview">
-        In this podcast interview, David Rubenstein speaks to one of the most powerful women business executives in China and the world, Ms. Jean Liu of Didi. They discuss the emergence of Didi as a ride-sharing powerhouse in China, its expansion to global markets, and her own personal back story. The interview gives viewers an excellent glimpse into the effort, leadership and strategy it takes to successfully run a game-changing technology enterprise.
-        </p>
-        <Button href="
-        https://www.youtube.com/watch?v=0-iphU-n8RM
-        " pos="center">Listen Here</Button>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Shen Lee" img={shen}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            Agrifood Tech (no surprises there). The food industry is going to change more in the next 10 years than it has in the last 30.The future of food is fast, fresh, and hungry for disruption, requiring new solutions to today's most pressing food production problems. We need to embrace and invest in the scientific and technological advances in food to build a more sustainable, inclusive, and innovative food future.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            1. Pursue impact over titles 
+2. Pave your own path and define your own version of success 
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Dropcopter
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
       </Article>
-      <Article title='TERM OF THE WEEK'>
-      <h1 className="headline text-center">
-      What are “Pro Rata Rights”? 
-      </h1>
-      <p className="preview text-center">
-      Pro Rata Rights refers to the rights of an existing investor to participate in subsequent rounds of the company’s funding to maintain their initial ownership percentage. These rights are generally demanded by early-stage investors, who use Pro Rata Rights to hedge against the large risk associated with early-stage companies. They can be especially helpful for investors who intend to keep their board seats and are required to maintain a certain percentage of ownership. Pro Rata Rights are a crucial factor that founders must evaluate when choosing their early investors. Founders should look for investors that can double as strategic advisors, as they will have the ability to maintain influential equity stakes in their companies.
-      </p>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Jeff Liu" img={jeff}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            With utility-scale solar and onshore wind becoming increasingly cost-competitive with conventional energy sources, I'm really excited about the clean energy space. It's interesting to see how subsidies, demand response, and regulators will shape the industry, but I'm quite optimistic about the future of clean tech!
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            Take risks and bet on yourself. But don't neglect the friendships you make along the way!
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Astranis
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
       </Article>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Christophe Gerlach" img={christophe}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            I'm interesting in learning more about the power of big data. There will be so many more data outputs in the comings years (IoT, mobile technology innovation, etc), and I am excited to see what tools entrepreneurs build with these new data sources.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            Choose your closest friends wisely -  they have a huge influence on your worldview!
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Stripe
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Article>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Daniel Solinsky" img={deal}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            Supply Chain and Logistics is a puzzle humanity has been trying to solve since the beginning of its existence. Ongoing research into predictive analytics and transportation systems will forever improve the efficiency of this industry and I am excited to see this change on a global scale.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            Searching for new perspectives and listening to learn are equally as important as original thought.
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Robinhood
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Article>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Zachary Shine" img={zach}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            Public transit. Because nothing brings me more joy than to see a demolish waterfront highway replaced with a park.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            Be present. Take advantage of everything that Cornell and Ithaca have to offer. And never take school (your classes) too seriously.
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Turo
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Article>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Mason Woods" img={mason}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            Aerospace technology and space travel mostly because it's cool af, but also I think it's unironically the next frontier. Also, greentech is fascinating because it's literally essential.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            Keep an open mind and search for disruptive technologies and models outside where others don't look. Also, follow your passions, and I mean this in the most genuine way possible. Dare to truly find what you love and make your life your own, otherwise it won't be yours. It will be someone else's.
+            </p>
+          </Col>
+        </Row>
+      </Article>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Claire Pan" img={claire}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            I’m really interested in the chronic health space. The American healthcare system is so broken and fragmented. It focuses on episodic care and doesn’t provide long-term sustainable care to the millions of people who live with chronic diseases. There’s so much opportunity to disrupt the space and create some truly meaningful and life-changing.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            My best piece of advice is to always say yes to opportunities (that you have room to take on). I didn't know what venture capital was when I joined CVC, but I am so grateful that it led me to a career path that truly excites me and introduced me to some of the most inspiring people.
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Milkbar
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Article>
+        </Col>
+        <Col lg={6} md={6}>
+        <Article title="Grace Shau" img={grace}>
+        <Row>
+          <Col lg={12}>
+            <h1 className="headline">
+            What is an industry you're interested in?
+            </h1>
+            <p className="preview">
+            Edtech : I think the current education system is in need of reform especially given the increasing importance and expectation of tech literacy. Additionally the COVID crisis has highlighted the inadequacy of the infrastructure to accommodate for the shifting needs of the students.
+            </p>
+          </Col>
+          <Col lg={12}>
+            <h1 className="headline mt-3">
+            Any words of wisdom?
+            </h1>
+            <p className="preview">
+            Always remember to give back. No one got to where they are without the help of others, so be that other for someone else! 
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col>
+            <div className="text-center">
+              <h1 className="mid-title">Favorite Startup</h1>
+            </div>
+            <Table hover className="mt-4" responsive>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Founded</th>
+                  <th>Last Round</th>
+                  <th>Total Funded</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src={startup1a} alt="Startup"/>
+                  </td>
+                  <td>
+                    <a href="
+                    https://www.wallbox.com/
+                    " target="_blank" rel="noopener noreferrer">
+                      Neverware
+                    </a>
+                  </td>
+                  <td>2015</td>
+                  <td>Series A</td>
+                  <td>$29.6M</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Article>
+        </Col>
+      </Row>
       <Footer />
     </div>
     );

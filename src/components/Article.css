@@ -56,12 +56,12 @@
 
 .headline { 
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .preview {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .borderRight {
@@ -70,7 +70,7 @@
 
 .mid-title {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 20px;
 }
 
 .startup {
