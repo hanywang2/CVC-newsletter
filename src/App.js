@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import firebase from './firebase/index';
 import Filter from 'bad-words';
+import Confetti from 'react-confetti'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,17 +15,25 @@ import { Row, Col, InputGroup, FormControl, Button as Click, Table } from 'react
 import './App.css';
 
 import matt from './assets/seniors/matt.png';
+import mattstartup from './assets/seniors/mattstartup.png';
 import david from './assets/seniors/david.png';
+import davidstartup from './assets/seniors/davidstartup.png';
 import zach from './assets/seniors/zach.png';
+import zachstartup from './assets/seniors/zachstartup.png';
 import shen from './assets/seniors/shen.png';
+import shenstartup from './assets/seniors/shenstartup.png';
 import mason from './assets/seniors/mason.png';
+// import masonstartup from './assets/seniors/masonstartup.png';
 import jeff from './assets/seniors/jeff.png';
+import jeffstartup from './assets/seniors/jeffstartup.png';
 import christophe from './assets/seniors/christophe.png';
+import christophestartup from './assets/seniors/christophestartup.png';
 import deal from './assets/seniors/deal.png';
+import dealstartup from './assets/seniors/dealstartup.png';
 import claire from './assets/seniors/claire.png';
+import clairestartup from './assets/seniors/clairestartup.png';
 import grace from './assets/seniors/grace.png';
-
-import startup1a from './assets/startup1a.png';
+import gracestartup from './assets/seniors/gracestartup.png';
 
 class App extends Component {
 
@@ -79,13 +88,14 @@ class App extends Component {
   render() {
     return (
       <div>
+      <Confetti />
       <Header date={this.state.date} authors={this.state.authors}/>
       <Article title='A BIG HOORA TO OUR SENIORS 🎉'>
       <h1 className="headline text-center">
-      What are “Pro Rata Rights”? 
+      Congratulations to our ten thinkers, dreamers, and doers for graduating this year!
       </h1>
       <p className="preview text-center">
-      Pro Rata Rights refers to the rights of an existing investor to participate in subsequent rounds of the company’s funding to maintain their initial ownership percentage. These rights are generally demanded by early-stage investors, who use Pro Rata Rights to hedge against the large risk associated with early-stage companies. They can be especially helpful for investors who intend to keep their board seats and are required to maintain a certain percentage of ownership. Pro Rata Rights are a crucial factor that founders must evaluate when choosing their early investors. Founders should look for investors that can double as strategic advisors, as they will have the ability to maintain influential equity stakes in their companies.
+      We thank you for all the phenomenal work at CVC over the past few years. You have all been amazing. We wish you the absolute best in your graduation and beyond. 
       </p>
       </Article>
       <Row>
@@ -127,18 +137,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={mattstartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    https://iota.bio/
                     " target="_blank" rel="noopener noreferrer">
-                      Wallbox
+                      Iota Biosciences
                     </a>
                   </td>
-                  <td>2015</td>
+                  <td>2017</td>
                   <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>$15M</td>
                 </tr>
               </tbody>
             </Table>
@@ -184,18 +194,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={davidstartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://neurodatalab.com/
+                      https://neurodatalab.com
                     " target="_blank" rel="noopener noreferrer">
                       Neurodata Lab
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2016</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
                 </tr>
               </tbody>
             </Table>
@@ -242,18 +252,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={shenstartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    https://www.dropcopter.com/
                     " target="_blank" rel="noopener noreferrer">
                       Dropcopter
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2013</td>
+                  <td>Grant</td>
+                  <td>$750K</td>
                 </tr>
               </tbody>
             </Table>
@@ -299,18 +309,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={jeffstartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    http://www.astranis.com/
                     " target="_blank" rel="noopener noreferrer">
                       Astranis
                     </a>
                   </td>
                   <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>Series B</td>
+                  <td>$103.6M</td>
                 </tr>
               </tbody>
             </Table>
@@ -326,7 +336,7 @@ class App extends Component {
             What is an industry you're interested in?
             </h1>
             <p className="preview">
-            I'm interesting in learning more about the power of big data. There will be so many more data outputs in the comings years (IoT, mobile technology innovation, etc), and I am excited to see what tools entrepreneurs build with these new data sources.
+            I'm interested in learning more about the power of big data. There will be so many more data outputs in the comings years (IoT, mobile technology innovation, etc), and I am excited to see what tools entrepreneurs build with these new data sources.
             </p>
           </Col>
           <Col lg={12}>
@@ -356,18 +366,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={christophestartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    https://stripe.com
                     " target="_blank" rel="noopener noreferrer">
                       Stripe
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2010</td>
+                  <td>Series G</td>
+                  <td>$1.6B</td>
                 </tr>
               </tbody>
             </Table>
@@ -376,7 +386,7 @@ class App extends Component {
       </Article>
         </Col>
         <Col lg={6} md={6}>
-        <Article title="Daniel Solinsky" img={deal}>
+        <Article title='Daniel "Deal" Solinsky' img={deal}>
         <Row>
           <Col lg={12}>
             <h1 className="headline">
@@ -413,18 +423,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={dealstartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    https://www.robinhood.com/
                     " target="_blank" rel="noopener noreferrer">
                       Robinhood
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2013</td>
+                  <td>Series F</td>
+                  <td>$1.2B</td>
                 </tr>
               </tbody>
             </Table>
@@ -470,18 +480,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={zachstartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    https://turo.com/
                     " target="_blank" rel="noopener noreferrer">
                       Turo
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2010</td>
+                  <td>Series E</td>
+                  <td>$467.4M</td>
                 </tr>
               </tbody>
             </Table>
@@ -549,18 +559,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={clairestartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    http://milkbarstore.com/
                     " target="_blank" rel="noopener noreferrer">
                       Milkbar
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2008</td>
+                  <td>Series E</td>
+                  <td>N/A</td>
                 </tr>
               </tbody>
             </Table>
@@ -606,18 +616,18 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td>
-                    <img src={startup1a} alt="Startup"/>
+                    <img src={gracestartup} alt="Startup"/>
                   </td>
                   <td>
                     <a href="
-                    https://www.wallbox.com/
+                    https://neverware.com
                     " target="_blank" rel="noopener noreferrer">
                       Neverware
                     </a>
                   </td>
-                  <td>2015</td>
-                  <td>Series A</td>
-                  <td>$29.6M</td>
+                  <td>2011</td>
+                  <td>Series B</td>
+                  <td>$14.1M</td>
                 </tr>
               </tbody>
             </Table>
