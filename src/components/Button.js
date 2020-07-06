@@ -5,7 +5,7 @@ import './Button.css';
 export default function Button(props) {
     return (
         <div className={`my-4 text-${props.pos}`}>
-            <a className="clickable" href={props.href} style={{ backgroundColor: props.color ? props.color : 'black' }} 
+            <a className="clickable" href={props.href} style={{ backgroundColor: props.color ? props.color : '#A5312A' }} 
             target="_blank" rel="noopener noreferrer">{props.children}</a>
         </div>
     )

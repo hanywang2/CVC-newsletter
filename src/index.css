@@ -3,7 +3,7 @@ body {
   font-family: proxima-nova, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #E5E5E5;
+  background-color: #333;
 }
 
 code {
