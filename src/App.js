@@ -84,6 +84,10 @@ As our members continue to educate themselves on how they can be better allies t
 <p className="preview">
 We know that these conversations are only the beginning and we have a lot more work to do. We are committed to holding each other accountable for our words and actions every day moving forward.
             </p>
+            <br/>
+            <p className="preview font-italic">
+- The Cornell Venture Capital Team
+            </p>
           </Col>
         </Row>
       </Article>
