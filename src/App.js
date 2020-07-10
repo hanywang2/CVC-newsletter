@@ -95,10 +95,10 @@ We know that these conversations are only the beginning and we have a lot more w
         <Row>
           <Col lg={12} className="borderRight">
             <p className="preview text-center" style={{fontStyle: 'italic', fontSize: 20}}>
-            Chrissa McFarlane, CEO of Patientory, on disruption, diversity, and making a difference for the better in healthcare and beyond.
+            Chrissa McFarlane on disruption, diversity, and making a difference for the better in healthcare and beyond.
             </p>
             <Button href="
-            
+            https://medium.com/@rvb27/founder-spotlight-chrissa-mcfarlane-10a83f61bb4a?sk=37166ce04833bcd0d2dd0144ed4302e2
             " pos="center">Read Here</Button>
           </Col>
         </Row>
@@ -107,10 +107,10 @@ We know that these conversations are only the beginning and we have a lot more w
         <Row>
           <Col lg={12} className="borderRight">
           <p className="preview text-center" style={{fontStyle: 'italic', fontSize: 20}}>
-          Mike Asem is a changemaker, aiming to disrupt the status quo with the powerful presences and perspectives of diverse investors and founders who have long been underrepresented and overlooked in Venture Capital.
+          Mike Asem on disrupting the status quo with the powerful presences of underrepresented and overlooked voices in venture.
             </p>
             <Button href="
-            
+            https://medium.com/@rvb27/venture-spotlight-mike-asem-de156d48da7a?sk=7733d372bebd9ab7ec6495422c3ba4a7
             " pos="center">Read Here</Button>
           </Col>
         </Row>
@@ -122,7 +122,7 @@ We know that these conversations are only the beginning and we have a lot more w
           Shelly Bell on her journey to entrepreneurship, empowering Black and Brown womxn, and sparking a revolution in the current financial system to support minority founders.
             </p>
             <Button href="
-            
+            https://medium.com/@as3484/founder-spotlight-shelly-bell-4a461d2f4227?sk=0f76a7bff0c4098182c60ebce6b7df5d
             " pos="center">Read Here</Button>
           </Col>
         </Row>
